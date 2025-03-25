@@ -1,5 +1,6 @@
 package models
 
+// TxSpec contains transaction data in various formats and with sender and recipient information.
 type TxSpec struct {
 	Sender    User   `json:"sender"`
 	Recipient User   `json:"recipient"`

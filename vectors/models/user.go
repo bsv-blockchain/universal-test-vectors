@@ -1,5 +1,6 @@
 package models
 
+// User represents all the information about a user.
 type User struct {
 	PrivateKey string `json:"private_key"`
 	PublicKey  string `json:"public_key"`

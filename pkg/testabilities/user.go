@@ -2,6 +2,7 @@ package testabilities
 
 import (
 	"encoding/hex"
+
 	"github.com/4chain-ag/universal-test-vectors/pkg/defs"
 	"github.com/4chain-ag/universal-test-vectors/pkg/internal/interpreter"
 	bip32 "github.com/bsv-blockchain/go-sdk/compat/bip32"

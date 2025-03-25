@@ -2,8 +2,8 @@ package interpreter
 
 import (
 	"fmt"
-	"github.com/4chain-ag/universal-test-vectors/pkg/internal/type42"
 
+	"github.com/4chain-ag/universal-test-vectors/pkg/internal/type42"
 	primitives "github.com/bsv-blockchain/go-sdk/primitives/ec"
 	"github.com/bsv-blockchain/go-sdk/script"
 	"github.com/bsv-blockchain/go-sdk/transaction/template/p2pkh"

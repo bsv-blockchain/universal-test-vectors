@@ -6,17 +6,17 @@ import (
 	"github.com/bsv-blockchain/go-sdk/script"
 )
 
-const ShortData = "hello world"
+const shortData = "hello world"
 
 var opReturnTxs = map[string]testabilities.TransactionSpec{
 	"simple": testabilities.GivenTX().
 		WithInput(1000).
 		WithP2PKHOutput(999).
-		WithOPReturn(ShortData),
+		WithOPReturn(shortData),
 	"no-opfalse": testabilities.GivenTX().
 		WithInput(1000).
 		WithP2PKHOutput(999).
-		WithOutputScriptParts(testabilities.OpCode(script.OpRETURN), testabilities.PushData(ShortData)),
+		WithOutputScriptParts(testabilities.OpCode(script.OpRETURN), testabilities.PushData(shortData)),
 }
 
 func init() {

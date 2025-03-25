@@ -5,6 +5,7 @@ import (
 	"github.com/4chain-ag/universal-test-vectors/vectors/models"
 )
 
+// FromTxSpec converts a testabilities.TransactionSpec to JSON-serializable models.TxSpec
 func FromTxSpec(spec testabilities.TransactionSpec) models.TxSpec {
 	return models.TxSpec{
 		Sender:    FromUser(spec.Sender()),

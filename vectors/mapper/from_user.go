@@ -7,6 +7,7 @@ import (
 	"github.com/4chain-ag/universal-test-vectors/vectors/models"
 )
 
+// FromUser converts a testabilities.User to JSON-serializable models.User.
 func FromUser(user testabilities.User) models.User {
 	return models.User{
 		Paymails: slices.Collect(func(yield func(models.Paymail) bool) {
