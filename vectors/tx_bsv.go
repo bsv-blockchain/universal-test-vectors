@@ -23,5 +23,5 @@ var bsvTxs = map[string]testabilities.TransactionSpec{
 }
 
 func init() {
-	addCategory("bsv-tx", bsvTxs, mapper.FromTxSpec)
+	addCategory("bsv-tx-", bsvTxs, mapper.FromTxSpec)
 }
