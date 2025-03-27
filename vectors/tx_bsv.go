@@ -18,8 +18,8 @@ var bsvTxs = map[string]testabilities.TransactionSpec{
 		WithP2PKHOutput(499).
 		WithP2PKHOutput(500),
 	"3-single-source-inputs": testabilities.GivenTX().
-		WithSingleSourceInputs(1000, 500, 250).
-		WithP2PKHOutput(999),
+		WithSingleSourceInputs(1000, 500, 500).
+		WithP2PKHOutput(1999),
 }
 
 func init() {
