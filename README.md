@@ -1,29 +1,22 @@
 # universal-test-vectors
 
-[//]: # (TODO: ADD SUMMARY)
+> [!NOTE]
+> This is only an MPV implementation - almost all mechanisms are copied from `spv-wallet` codebase.
 
-## Documentation
+This repository contains a set of test vectors (JSON files) that can be used to test the implementation in various programming languages.
 
-[//]: # (TODO: ADD DOCUMENTATION)
+- You can find the JSON files in [generated](./generated) directory.
 
-## Contribution Guidelines
+## How it works
 
-We're always looking for contributors to help us improve the SDK. Whether it's bug reports, feature requests, or pull requests - all contributions are welcome.
+The idea is to have a readable set of golang functions that can generate test vectors and save them in JSON files. 
 
-1. **Fork & Clone**: Fork this repository and clone it to your local machine.
-2. **Set Up**: Run `go mod tidy` to install all dependencies.
-3. **Make Changes**: Create a new branch and make your changes.
-4. **Test**: Ensure all tests pass by running `go test ./...`.
-5. **Commit**: Commit your changes and push to your fork.
-6. **Pull Request**: Open a pull request from your fork to this repository.
-   For more details, check the [contribution guidelines](./CONTRIBUTING.md).
+- The definitions of the test vectors are in the [vectors](./vectors) directory.
 
-## Support & Contacts
+## Available test vectors
 
-For questions, bug reports, or feature requests, please open an issue on GitHub.
+- BSV transactions from one sender to one receiver
+- BSV transactions from one sender to one receiver and with OP_RETURN output
+- Users with its private & public keys and additional information
 
-## License
-
-The license for the code in this repository is the Open BSV License. Refer to [LICENSE.txt](./LICENSE) for the license text.
-
-Thank you for being a part of the BSV Blockchain Libraries Project. Let's build the future of BSV Blockchain together!
+## 

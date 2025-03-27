@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -9,13 +10,18 @@ import (
 	"github.com/4chain-ag/universal-test-vectors/vectors"
 )
 
+//go:generate go run main.go --destination=../../generated
+
 func main() {
+	destination := flag.String("destination", "generated", "Destination directory for generated files")
+	flag.Parse()
+
 	for k, v := range vectors.All {
-		generateJSON(k, v)
+		generateJSON(*destination, k, v)
 	}
 }
 
-func generateJSON(key string, s any) {
+func generateJSON(destination string, key string, s any) {
 	data, err := json.MarshalIndent(s, "", "  ")
 	if err != nil {
 		fmt.Printf("Error marshaling JSON: %v\n", err)
@@ -23,9 +29,9 @@ func generateJSON(key string, s any) {
 	}
 
 	fileName := fmt.Sprintf("%s.json", key)
-	filePath := filepath.Join("generated", fileName)
+	filePath := filepath.Join(destination, fileName)
 
-	err = os.MkdirAll("generated", 0750)
+	err = os.MkdirAll(destination, 0750)
 	if err != nil {
 		fmt.Printf("Error creating directory: %v\n", err)
 		return
