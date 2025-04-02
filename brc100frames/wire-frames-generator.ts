@@ -36,8 +36,8 @@ export async function generateWireFramesFor<
         json: {
             args: args[0],
             result: resultObj,
-        }
-
+        },
+        name: actionName as string,
     }
 }
 

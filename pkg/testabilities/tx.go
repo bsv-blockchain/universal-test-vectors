@@ -41,6 +41,7 @@ type TransactionSpec interface {
 	BEEF() string
 	RawTX() string
 	EF() string
+	LockingScripts() []string
 
 	Sender() User
 	Recipient() User
@@ -250,6 +251,16 @@ func (spec *txSpec) EF() string {
 	spec.requireNoError(err, "getting ef hex")
 
 	return ef
+}
+
+// LockingScripts returns the locking scripts of the transaction
+func (spec *txSpec) LockingScripts() []string {
+	tx := spec.TX()
+	ls := make([]string, len(tx.Outputs))
+	for i, o := range tx.Outputs {
+		ls[i] = o.LockingScript.String()
+	}
+	return ls
 }
 
 func (spec *txSpec) makeParentTX(satoshis ...uint64) *trx.Transaction {

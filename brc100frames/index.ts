@@ -9,8 +9,8 @@ async function generate(destination: string) {
     for (const key in allFrames) {
         const obj = await allFrames[key]
 
-        saveFile(destination, `${key}-args`, obj.wire.args, obj.json.args)
-        saveFile(destination, `${key}-result`, obj.wire.result, obj.json.result)
+        saveFile(destination, `${obj.name}-${key}-args`, obj.wire.args, obj.json.args)
+        saveFile(destination, `${obj.name}-${key}-result`, obj.wire.result, obj.json.result)
     }
 }
 
