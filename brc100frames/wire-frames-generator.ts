@@ -30,7 +30,7 @@ export async function generateWireFramesFor<
 
     return {
         wire: {
-            args: frameNumbersToHex(mockTransmitToWallet.call!),
+            args: frameNumbersToHex(mockTransmitToWallet.call!).slice(2), // slice 2, because there is one byte for call number which is not sent via the network
             result: frameNumbersToHex(mockTransmitToWallet.result!)
         },
         json: {
