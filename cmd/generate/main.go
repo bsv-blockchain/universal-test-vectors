@@ -11,7 +11,8 @@ import (
 )
 
 //go:generate go run main.go --destination=../../generated
-//go:generate npm install && npx tsx ../../brc100frames/index.ts ../../generated
+//go:generate npm install
+//go:generate npx --yes tsx ../../brc100frames/index.ts ../../generated
 
 func main() {
 	destination := flag.String("destination", "generated", "Destination directory for generated files")
