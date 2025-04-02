@@ -31,10 +31,18 @@ Example json with a transaction fixture looks like this:
 - BSV transactions from one sender to one receiver
 - BSV transactions from one sender to one receiver and with OP_RETURN output
 - Users with its private & public keys and additional information
+- Wire (binary) and JSON frames for the communication (for now `createAction` only)
 
 ## How to add new test vectors
 
+### For transaction specification
+
 - Add a new definition in the [vectors](./vectors) directory (analogy to the existing ones).
+- Generate the JSON files by running `go generate ./...` in the root directory.
+- ... or make a PR with the new definition and the JSON files will be re-generated automatically.
+
+### For BRC-100 frame specification
+- Add a new definition in the [brc100frames](./brc100frames) directory (analogy to the existing ones - see [brc100frames/create-action.ts](./brc100frames/create-action.ts)).
 - Generate the JSON files by running `go generate ./...` in the root directory.
 - ... or make a PR with the new definition and the JSON files will be re-generated automatically.
 

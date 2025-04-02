@@ -24,4 +24,5 @@ export const createAction: Record<string, ReturnType<typeof generateWireFramesFo
             labels: ['test-label'],
         }
     ),
+    // Add more cases if needed
 }
