@@ -12,6 +12,8 @@ permissions:
 
 jobs:
   on-push:
-    uses: bactions/workflows/.github/workflows/on-push-go.yml@main
+    uses: bactions/workflows/.github/workflows/on-push-go.yml@on-push-additional-environment
+    with:
+      go-generate-extra-tools: "node"
     secrets:
       DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
