@@ -1,0 +1,12 @@
+{
+  "json": {
+    "txid": "deadbeef20248806deadbeef20248806deadbeef20248806deadbeef20248806",
+    "tx": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "wire": "0001deadbeef20248806deadbeef20248806deadbeef20248806deadbeef20248806010401020304ffff00"
+}
