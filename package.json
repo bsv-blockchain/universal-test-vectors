@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@types/node": "^22.13.17",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@bsv/sdk": "^1.4.15"
+  }
+}
