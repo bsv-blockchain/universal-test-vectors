@@ -24,5 +24,31 @@ export const createAction: Record<string, ReturnType<typeof generateWireFramesFo
             labels: ['test-label'],
         }
     ),
+    'no-signAndProcess': generateWireFramesFor(
+        'createAction',
+        {
+            signableTransaction: {
+                tx: Utils.toArray('01000000017cd347a6a099f82cde68faec941e888ebc3489b25403e3ffedd3280f3fa4cc03000000006b483045022100f269c3f340a9cfae580b057429f91e1fcb2d0afccb5a3b9d194d705b4decfbda0220725a74244d4618654335f3e14b9fceb50ada1f679bb8a00c087571643eb974714121034d2d6d23fbcb6eefe3e80c47044e36797dcb80d0ac5e96e732ef03c3c550a116ffffffff01e7030000000000001976a9143cf53c49c322d9d811728182939aee2dca087f9888ac00000000', 'hex'),
+                reference: "dGVzdA=="
+            }
+        },
+        {
+            description: 'Test action description with trust self and no-send',
+            outputs: [
+                {
+                    lockingScript: '76a9143cf53c49c322d9d811728182939aee2dca087f9888ac',
+                    satoshis: 999,
+                    outputDescription: 'Test output',
+                    basket: 'test-basket',
+                    customInstructions: 'Test instructions',
+                    tags: ['test-tag']
+                }
+            ],
+            labels: ['test-label'],
+            options: {
+                signAndProcess: false,
+            }
+        }
+    ),
     // Add more cases if needed
 }
