@@ -1,8 +1,10 @@
 import {createAction} from "./create-action";
+import {abortAction} from "./abort-action";
 import {saveFile} from "./save-file";
 
 const allFrames = {
-    ...createAction
+    ...createAction,
+    ...abortAction,
 }
 
 async function generate(destination: string) {
