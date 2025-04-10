@@ -1,8 +1,5 @@
 # universal-test-vectors
 
-> [!NOTE]
-> This is only an MVP implementation - almost all mechanisms are copied from `spv-wallet` codebase.
-
 This repository contains a set of test vectors (JSON files) that can be used to test the implementation in various programming languages.
 
 - You can find the JSON files in [generated](./generated) directory.

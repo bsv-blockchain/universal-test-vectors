@@ -1,10 +1,19 @@
 package vectors
 
 // All holds all the testing vectors. (registered by addCategory in one of the `init()` functions)
-var All = make(map[string]any)
+var All = make(map[string]TestVector)
 
-func addCategory[T any, Dst any](prefix string, specs map[string]T, mapper func(T) Dst) {
+// TestVector Single test vector with category name.
+type TestVector struct {
+	Category string
+	Vector   any
+}
+
+func addCategory[T any, Dst any](category string, specs map[string]T, mapper func(T) Dst) {
 	for k, v := range specs {
-		All[prefix+k] = mapper(v)
+		All[k] = TestVector{
+			Category: category,
+			Vector:   mapper(v),
+		}
 	}
 }
