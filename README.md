@@ -42,7 +42,7 @@ Example json with a transaction fixture looks like this:
 - ... or make a PR with the new definition and the JSON files will be re-generated automatically.
 
 ### For BRC-100 frame specification
-- Add a new definition in the [brc100frames](./brc100frames) directory (analogy to the existing ones - see [brc100frames/create-action.ts](./brc100frames/create-action.ts)).
+- Add a new definition in the [brc100frames](./BRC100frames) directory (analogy to the existing ones - see [brc100frames/create-action.ts](brc100frames/create-action.ts)).
 - Generate the JSON files by running `go generate ./...` in the root directory.
 - ... or make a PR with the new definition and the JSON files will be re-generated automatically.
 

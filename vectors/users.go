@@ -12,5 +12,5 @@ var users = map[string]testabilities.User{
 }
 
 func init() {
-	addCategory("user-", users, mapper.FromUser)
+	addCategory("user", users, mapper.FromUser)
 }

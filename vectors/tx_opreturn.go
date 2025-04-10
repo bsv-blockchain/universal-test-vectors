@@ -20,5 +20,5 @@ var opReturnTxs = map[string]testabilities.TransactionSpec{
 }
 
 func init() {
-	addCategory("opreturn-", opReturnTxs, mapper.FromTxSpec)
+	addCategory("opreturn", opReturnTxs, mapper.FromTxSpec)
 }
