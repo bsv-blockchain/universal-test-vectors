@@ -1,3 +1,5 @@
+DO NOT MERGE
+
 # universal-test-vectors
 
 This repository contains a set of test vectors (JSON files) that can be used to test the implementation in various programming languages.
