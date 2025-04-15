@@ -14,7 +14,7 @@ var bsvTxs = map[string]testabilities.TransactionSpec{
 		WithInput(500).
 		WithP2PKHOutput(999),
 	"1-in-2-out": testabilities.GivenTX().
-		WithInput(1000).
+		WithInput(1001).
 		WithP2PKHOutput(499).
 		WithP2PKHOutput(500),
 	"3-single-source-inputs": testabilities.GivenTX().
