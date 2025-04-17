@@ -3,9 +3,9 @@ package testabilities
 import (
 	"fmt"
 
-	"github.com/4chain-ag/universal-test-vectors/pkg/defs"
 	"github.com/bsv-blockchain/go-sdk/script"
 	trx "github.com/bsv-blockchain/go-sdk/transaction"
+	"github.com/bsv-blockchain/universal-test-vectors/pkg/defs"
 )
 
 // grandparentTXIDs are used to indicate prevTXID for parentTXs(source transactions)

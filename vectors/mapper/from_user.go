@@ -3,8 +3,8 @@ package mapper
 import (
 	"slices"
 
-	"github.com/4chain-ag/universal-test-vectors/pkg/testabilities"
-	"github.com/4chain-ag/universal-test-vectors/vectors/models"
+	"github.com/bsv-blockchain/universal-test-vectors/pkg/testabilities"
+	"github.com/bsv-blockchain/universal-test-vectors/vectors/models"
 )
 
 // FromUser converts a testabilities.User to JSON-serializable models.User.

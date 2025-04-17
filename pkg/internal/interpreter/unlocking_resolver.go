@@ -1,11 +1,11 @@
 package interpreter
 
 import (
-	"github.com/4chain-ag/universal-test-vectors/pkg/internal/type42"
 	primitives "github.com/bsv-blockchain/go-sdk/primitives/ec"
 	sdk "github.com/bsv-blockchain/go-sdk/transaction"
 	sighash "github.com/bsv-blockchain/go-sdk/transaction/sighash"
 	"github.com/bsv-blockchain/go-sdk/transaction/template/p2pkh"
+	"github.com/bsv-blockchain/universal-test-vectors/pkg/internal/type42"
 )
 
 func NewUnlockingScriptInterpreter() *Interpreter[*UnlockingTemplateResolver, primitives.PrivateKey] {

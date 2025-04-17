@@ -1,8 +1,8 @@
 package mapper
 
 import (
-	"github.com/4chain-ag/universal-test-vectors/pkg/testabilities"
-	"github.com/4chain-ag/universal-test-vectors/vectors/models"
+	"github.com/bsv-blockchain/universal-test-vectors/pkg/testabilities"
+	"github.com/bsv-blockchain/universal-test-vectors/vectors/models"
 )
 
 // FromTxSpec converts a testabilities.TransactionSpec to JSON-serializable models.TxSpec

@@ -3,10 +3,10 @@ package interpreter
 import (
 	"fmt"
 
-	"github.com/4chain-ag/universal-test-vectors/pkg/internal/type42"
 	primitives "github.com/bsv-blockchain/go-sdk/primitives/ec"
 	"github.com/bsv-blockchain/go-sdk/script"
 	"github.com/bsv-blockchain/go-sdk/transaction/template/p2pkh"
+	"github.com/bsv-blockchain/universal-test-vectors/pkg/internal/type42"
 )
 
 // NewAddressInterpreter creates a new custom instructions interpreter that resolves a public key to an address.
