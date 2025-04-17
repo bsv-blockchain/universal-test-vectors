@@ -3,7 +3,7 @@ package interpreter
 import (
 	"fmt"
 
-	"github.com/4chain-ag/universal-test-vectors/pkg/defs"
+	"github.com/bsv-blockchain/universal-test-vectors/pkg/defs"
 )
 
 // Interpreter is a struct that is used to interpret custom instructions.

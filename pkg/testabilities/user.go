@@ -3,12 +3,12 @@ package testabilities
 import (
 	"encoding/hex"
 
-	"github.com/4chain-ag/universal-test-vectors/pkg/defs"
-	"github.com/4chain-ag/universal-test-vectors/pkg/internal/interpreter"
 	bip32 "github.com/bsv-blockchain/go-sdk/compat/bip32"
 	ec "github.com/bsv-blockchain/go-sdk/primitives/ec"
 	"github.com/bsv-blockchain/go-sdk/script"
 	sdk "github.com/bsv-blockchain/go-sdk/transaction"
+	"github.com/bsv-blockchain/universal-test-vectors/pkg/defs"
+	"github.com/bsv-blockchain/universal-test-vectors/pkg/internal/interpreter"
 )
 
 // User is a fixture that is representing a user of the system.

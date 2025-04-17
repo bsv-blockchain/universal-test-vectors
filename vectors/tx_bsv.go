@@ -1,8 +1,8 @@
 package vectors
 
 import (
-	"github.com/4chain-ag/universal-test-vectors/pkg/testabilities"
-	"github.com/4chain-ag/universal-test-vectors/vectors/mapper"
+	"github.com/bsv-blockchain/universal-test-vectors/pkg/testabilities"
+	"github.com/bsv-blockchain/universal-test-vectors/vectors/mapper"
 )
 
 var bsvTxs = map[string]testabilities.TransactionSpec{

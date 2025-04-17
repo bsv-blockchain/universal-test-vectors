@@ -1,4 +1,4 @@
-module github.com/4chain-ag/universal-test-vectors
+module github.com/bsv-blockchain/universal-test-vectors
 
 go 1.24.0
 

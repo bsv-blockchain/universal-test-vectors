@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/4chain-ag/universal-test-vectors/vectors"
+	"github.com/bsv-blockchain/universal-test-vectors/vectors"
 )
 
 //go:generate go run main.go --destination=../../generated
