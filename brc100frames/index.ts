@@ -1,6 +1,6 @@
 import {createAction} from "./create-action";
 import {abortAction} from "./abort-action";
-import {saveFile} from "./save-file";
+import {saveFile} from "./generator/save-file";
 import {signAction} from "./sign-action";
 
 const allFrames = {

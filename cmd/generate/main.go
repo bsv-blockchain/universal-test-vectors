@@ -7,12 +7,12 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/4chain-ag/universal-test-vectors/vectors"
+	"github.com/bsv-blockchain/universal-test-vectors/vectors"
 )
 
 //go:generate go run main.go --destination=../../generated
 //go:generate npm install
-//go:generate npx --yes tsx ../../brc100frames/index.ts ../../generated
+//go:generate npx --yes tsx ../../brc100frames/index.ts ../../generated/brc100
 
 func main() {
 	destination := flag.String("destination", "generated", "Destination directory for generated files")
@@ -23,17 +23,18 @@ func main() {
 	}
 }
 
-func generateJSON(destination string, key string, s any) {
-	data, err := json.MarshalIndent(s, "", "  ")
+func generateJSON(destination string, key string, vec vectors.TestVector) {
+	data, err := json.MarshalIndent(vec.Vector, "", "  ")
 	if err != nil {
 		fmt.Printf("Error marshaling JSON: %v\n", err)
 		return
 	}
 
 	fileName := fmt.Sprintf("%s.json", key)
-	filePath := filepath.Join(destination, fileName)
+	dir := filepath.Join(destination, vec.Category)
+	filePath := filepath.Join(dir, fileName)
 
-	err = os.MkdirAll(destination, 0750)
+	err = os.MkdirAll(dir, 0750)
 	if err != nil {
 		fmt.Printf("Error creating directory: %v\n", err)
 		return
