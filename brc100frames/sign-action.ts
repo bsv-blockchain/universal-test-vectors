@@ -1,6 +1,5 @@
-import {generateWireFramesFor} from "./wire-frames-generator";
+import {generateWireFramesFor} from "./generator/wire-frames-generator";
 import {Utils} from "@bsv/sdk";
-
 
 export const signAction: Record<string, ReturnType<typeof generateWireFramesFor>> = {
     'signAction-simple': generateWireFramesFor(

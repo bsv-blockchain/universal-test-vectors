@@ -2,11 +2,13 @@ import {createAction} from "./create-action";
 import {abortAction} from "./abort-action";
 import {saveFile} from "./generator/save-file";
 import {signAction} from "./sign-action";
+import {listActions} from "./list-actions";
 
 const allFrames = {
     ...createAction,
     ...signAction,
     ...abortAction,
+    //...listActions, // TODO: This one fails to generate, possibly an issue with ts-sdk
 }
 
 async function generate(destination: string) {
