@@ -1,9 +1,11 @@
 import {createAction} from "./create-action";
 import {abortAction} from "./abort-action";
 import {saveFile} from "./save-file";
+import {signAction} from "./sign-action";
 
 const allFrames = {
     ...createAction,
+    ...signAction,
     ...abortAction,
 }
 
@@ -11,8 +13,8 @@ async function generate(destination: string) {
     for (const key in allFrames) {
         const obj = await allFrames[key]
 
-        saveFile(destination, `${obj.name}-${key}-args`, obj.wire.args, obj.json.args)
-        saveFile(destination, `${obj.name}-${key}-result`, obj.wire.result, obj.json.result)
+        saveFile(destination, `${key}-args`, obj.wire.args, obj.json.args)
+        saveFile(destination, `${key}-result`, obj.wire.result, obj.json.result)
     }
 }
 
