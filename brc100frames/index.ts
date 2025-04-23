@@ -3,12 +3,14 @@ import {abortAction} from "./abort-action";
 import {saveFile} from "./generator/save-file";
 import {signAction} from "./sign-action";
 import {listActions} from "./list-actions";
+import {internalizeAction} from "./internalize-action";
 
 const allFrames = {
     ...createAction,
     ...signAction,
     ...abortAction,
     //...listActions, // TODO: This one fails to generate, possibly an issue with ts-sdk
+    ...internalizeAction,
 }
 
 async function generate(destination: string) {
