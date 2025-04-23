@@ -14,7 +14,7 @@ const allFrames = {
     ...createAction,
     ...signAction,
     ...abortAction,
-    //...listActions, // TODO: This one fails to generate, possibly an issue with ts-sdk
+    ...listActions,
     ...internalizeAction,
     ...listOutputs,
     ...relinquishOutput,
