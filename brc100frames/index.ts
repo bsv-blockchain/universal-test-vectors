@@ -5,6 +5,7 @@ import {signAction} from "./sign-action";
 import {listActions} from "./list-actions";
 import {internalizeAction} from "./internalize-action";
 import {listOutputs} from "./list-outputs";
+import {relinquishOutput} from "./relinquish-output";
 
 const allFrames = {
     ...createAction,
@@ -13,6 +14,7 @@ const allFrames = {
     //...listActions, // TODO: This one fails to generate, possibly an issue with ts-sdk
     ...internalizeAction,
     ...listOutputs,
+    ...relinquishOutput,
 }
 
 async function generate(destination: string) {
