@@ -6,6 +6,7 @@ import {listActions} from "./list-actions";
 import {internalizeAction} from "./internalize-action";
 import {listOutputs} from "./list-outputs";
 import {relinquishOutput} from "./relinquish-output";
+import {getPublicKey} from "./get-public-key";
 
 const allFrames = {
     ...createAction,
@@ -15,6 +16,7 @@ const allFrames = {
     ...internalizeAction,
     ...listOutputs,
     ...relinquishOutput,
+    ...getPublicKey,
 }
 
 async function generate(destination: string) {
