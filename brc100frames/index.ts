@@ -4,6 +4,7 @@ import {saveFile} from "./generator/save-file";
 import {signAction} from "./sign-action";
 import {listActions} from "./list-actions";
 import {internalizeAction} from "./internalize-action";
+import {listOutputs} from "./list-outputs";
 
 const allFrames = {
     ...createAction,
@@ -11,6 +12,7 @@ const allFrames = {
     ...abortAction,
     //...listActions, // TODO: This one fails to generate, possibly an issue with ts-sdk
     ...internalizeAction,
+    ...listOutputs,
 }
 
 async function generate(destination: string) {
