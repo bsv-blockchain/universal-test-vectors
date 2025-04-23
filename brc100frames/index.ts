@@ -7,6 +7,7 @@ import {internalizeAction} from "./internalize-action";
 import {listOutputs} from "./list-outputs";
 import {relinquishOutput} from "./relinquish-output";
 import {getPublicKey} from "./get-public-key";
+import {revealCounterpartyKeyLinkage} from "./reveal-counterparty-key-linkage";
 
 const allFrames = {
     ...createAction,
@@ -17,6 +18,7 @@ const allFrames = {
     ...listOutputs,
     ...relinquishOutput,
     ...getPublicKey,
+    ...revealCounterpartyKeyLinkage,
 }
 
 async function generate(destination: string) {
