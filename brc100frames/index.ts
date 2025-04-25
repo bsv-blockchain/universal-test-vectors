@@ -12,6 +12,7 @@ import {revealSpecificKeyLinkage} from "./reveal-specific-key-linkage";
 import {encrypt} from "./encrypt";
 import {decrypt} from "./decrypt";
 import {createHmac} from "./create-hmac";
+import {verifyHmac} from "./verify-hmac";
 
 const allFrames = {
     ...createAction,
@@ -27,6 +28,7 @@ const allFrames = {
     ...encrypt,
     ...decrypt,
     ...createHmac,
+    ...verifyHmac,
 }
 
 async function generate(destination: string) {
