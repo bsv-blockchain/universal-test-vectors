@@ -13,6 +13,7 @@ import {encrypt} from "./encrypt";
 import {decrypt} from "./decrypt";
 import {createHmac} from "./create-hmac";
 import {verifyHmac} from "./verify-hmac";
+import {createSignature} from "./create-signature";
 
 const allFrames = {
     ...createAction,
@@ -29,6 +30,7 @@ const allFrames = {
     ...decrypt,
     ...createHmac,
     ...verifyHmac,
+    ...createSignature,
 }
 
 async function generate(destination: string) {
