@@ -20,6 +20,7 @@ import {listCertificates} from "./list-certificates";
 import {proveCertificate} from "./prove-certificate";
 import {relinquishCertificate} from "./relinquish-certificate";
 import {discoverByIdentityKey} from "./discover-by-identity-key";
+import {discoverByAttributes} from "./discover-by-attributes";
 
 const allFrames = {
     ...createAction,
@@ -43,6 +44,7 @@ const allFrames = {
     ...proveCertificate,
     ...relinquishCertificate,
     ...discoverByIdentityKey,
+    ...discoverByAttributes,
 }
 
 async function generate(destination: string) {
