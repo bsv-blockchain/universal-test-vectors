@@ -16,6 +16,7 @@ import {verifyHmac} from "./verify-hmac";
 import {createSignature} from "./create-signature";
 import {verifySignature} from "./verify-signature";
 import {acquireCertificate} from "./acquire-certificate";
+import {listCertificates} from "./list-certificates";
 
 const allFrames = {
     ...createAction,
@@ -35,6 +36,7 @@ const allFrames = {
     ...createSignature,
     ...verifySignature,
     ...acquireCertificate,
+    ...listCertificates,
 }
 
 async function generate(destination: string) {
