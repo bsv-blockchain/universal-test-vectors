@@ -18,6 +18,7 @@ import {verifySignature} from "./verify-signature";
 import {acquireCertificate} from "./acquire-certificate";
 import {listCertificates} from "./list-certificates";
 import {proveCertificate} from "./prove-certificate";
+import {relinquishCertificate} from "./relinquish-certificate";
 
 const allFrames = {
     ...createAction,
@@ -39,6 +40,7 @@ const allFrames = {
     ...acquireCertificate,
     ...listCertificates,
     ...proveCertificate,
+    ...relinquishCertificate,
 }
 
 async function generate(destination: string) {

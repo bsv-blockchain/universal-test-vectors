@@ -1,5 +1,5 @@
 import {generateWireFramesFor} from "./generator/wire-frames-generator";
-import {ProveCertificateArgs, ProveCertificateResult} from "@bsv/sdk";
+import type {ProveCertificateArgs, ProveCertificateResult} from "@bsv/sdk";
 
 // Define the keys used in the test cases
 const pubKeyHex = "025ad43a22ac38d0bc1f8bacaabb323b5d634703b7a774c4268f6a09e4ddf79097";
