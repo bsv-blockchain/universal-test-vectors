@@ -23,6 +23,10 @@ import {discoverByIdentityKey} from "./discover-by-identity-key";
 import {discoverByAttributes} from "./discover-by-attributes";
 import {isAuthenticated} from "./is-authenticated";
 import {waitForAuthentication} from "./wait-for-authentication";
+import {getHeight} from "./get-height";
+import {getHeaderForHeight} from "./get-header-for-height";
+import {getNetwork} from "./get-network";
+import {getVersion} from "./get-version";
 
 const allFrames = {
     ...createAction,
@@ -49,6 +53,10 @@ const allFrames = {
     ...discoverByAttributes,
     ...isAuthenticated,
     ...waitForAuthentication,
+    ...getHeight,
+    ...getHeaderForHeight,
+    ...getNetwork,
+    ...getVersion,
 }
 
 async function generate(destination: string) {
