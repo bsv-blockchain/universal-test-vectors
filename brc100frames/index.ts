@@ -22,6 +22,7 @@ import {relinquishCertificate} from "./relinquish-certificate";
 import {discoverByIdentityKey} from "./discover-by-identity-key";
 import {discoverByAttributes} from "./discover-by-attributes";
 import {isAuthenticated} from "./is-authenticated";
+import {waitForAuthentication} from "./wait-for-authentication";
 
 const allFrames = {
     ...createAction,
@@ -47,6 +48,7 @@ const allFrames = {
     ...discoverByIdentityKey,
     ...discoverByAttributes,
     ...isAuthenticated,
+    ...waitForAuthentication,
 }
 
 async function generate(destination: string) {
