@@ -10,6 +10,7 @@ import {getPublicKey} from "./get-public-key";
 import {revealCounterpartyKeyLinkage} from "./reveal-counterparty-key-linkage";
 import {revealSpecificKeyLinkage} from "./reveal-specific-key-linkage";
 import {encrypt} from "./encrypt";
+import {decrypt} from "./decrypt";
 
 const allFrames = {
     ...createAction,
@@ -23,6 +24,7 @@ const allFrames = {
     ...revealCounterpartyKeyLinkage,
     ...revealSpecificKeyLinkage,
     ...encrypt,
+    ...decrypt,
 }
 
 async function generate(destination: string) {
