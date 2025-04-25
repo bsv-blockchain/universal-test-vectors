@@ -11,6 +11,7 @@ import {revealCounterpartyKeyLinkage} from "./reveal-counterparty-key-linkage";
 import {revealSpecificKeyLinkage} from "./reveal-specific-key-linkage";
 import {encrypt} from "./encrypt";
 import {decrypt} from "./decrypt";
+import {createHmac} from "./create-hmac";
 
 const allFrames = {
     ...createAction,
@@ -25,6 +26,7 @@ const allFrames = {
     ...revealSpecificKeyLinkage,
     ...encrypt,
     ...decrypt,
+    ...createHmac,
 }
 
 async function generate(destination: string) {
