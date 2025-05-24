@@ -5,6 +5,7 @@ const SubjectPubKeyHex = "025ad43a22ac38d0bc1f8bacaabb323b5d634703b7a774c4268f6a
 const CertifierPubKeyHex = "0294c479f762f6baa97fbcd4393564c1d7bd8336ebd15928135bbcf575cd1a71a1";
 const TypeBase64 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXN0LXR5cGU=";
 const SerialNumberBase64 = "AAAAAAAAAAAAAAAAAAB0ZXN0LXNlcmlhbC1udW1iZXI=";
+const RevocationOutpoint = "aec245f27b7640c8b1865045107731bfb848115c573f7da38166074b1c9e475d.0";
 
 export const acquireCertificate: Record<string, ReturnType<typeof generateWireFramesFor>> = {
     'acquireCertificate-simple': generateWireFramesFor(
@@ -26,7 +27,7 @@ export const acquireCertificate: Record<string, ReturnType<typeof generateWireFr
             acquisitionProtocol: "issuance",
             fields: {email: "alice@example.com", name: "Alice"}, // Alphabetical
             serialNumber: SerialNumberBase64,
-            revocationOutpoint: "txid123:0",
+            revocationOutpoint: RevocationOutpoint,
             signature: "sig-hex",
             certifierUrl: "https://certifier.example.com",
             keyringRevealer: "revealer-key-hex", // Assuming this is a string ID/hex
