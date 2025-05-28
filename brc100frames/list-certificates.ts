@@ -29,7 +29,7 @@ export const listCertificates: Record<string, ReturnType<typeof generateWireFram
         },
         { // Args object definition
             certifiers: [CounterpartyHex, VerifierHex],
-            types: ["AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXN0LXR5cGUx", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXN0LXR5cGUy"],
+            types: ["dGVzdC10eXBlMSAgICAgICAgICAgICAgICAgICAgICA=", "dGVzdC10eXBlMiAgICAgICAgICAgICAgICAgICAgICA="],
             limit: 5,
             offset: 0,
             privileged: true,
