@@ -14,7 +14,7 @@ export const createSignature: Record<string, ReturnType<typeof generateWireFrame
         'createSignature',
         {
             // Byte array representation for wire encoding
-            signature: hexToBytes("302502204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd41020100"),
+            signature: hexToBytes("302502204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd41020101"),
         },
         {
             protocolID: [1 /* SecurityLevelEveryApp */, 'test-protocol'],
