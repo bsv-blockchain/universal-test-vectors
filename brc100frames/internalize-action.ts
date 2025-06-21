@@ -16,9 +16,9 @@ export const internalizeAction: Record<string, ReturnType<typeof generateWireFra
                 outputIndex: 0,
                 protocol: "wallet payment",
                 paymentRemittance: {
-                    derivationPrefix: "prefix",
-                    derivationSuffix: "suffix",
-                    senderIdentityKey: "sender-key",
+                    derivationPrefix: "cHJlZml4", // "prefix"
+                    derivationSuffix: "c3VmZml4", // "suffix"
+                    senderIdentityKey: "03b106dae20ae8fca0f4e8983d974c4b583054573eecdcdcfad261c035415ce1ee",
                 }
             }, {
                 outputIndex: 1,
