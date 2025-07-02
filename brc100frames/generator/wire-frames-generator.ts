@@ -42,6 +42,5 @@ export async function generateWireFramesFor<
 }
 
 function frameNumbersToHex(numbers: number[]): string {
-    const body = new Uint8Array(numbers)
-    return Array.from(body, byte => byte.toString(16).padStart(2, '0')).join('');
+    return Array.from(numbers, num => num.toString(16).padStart(2, '0')).join('');
 }
