@@ -28,7 +28,7 @@ export const discoverByAttributes: Record<string, ReturnType<typeof generateWire
                         description: "Certifier description",
                         trust: 5,
                     },
-                    publiclyRevealedKeyring: {"pubField": "pubKey"},
+                    publiclyRevealedKeyring: {"pubField": "AlrUOiKsONC8H4usqrsyO11jRwO3p3TEJo9qCeTd95CX"},
                     decryptedFields: {"name": "Alice"},
                 }
             ]

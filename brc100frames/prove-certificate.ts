@@ -10,7 +10,7 @@ export const proveCertificate: Record<string, ReturnType<typeof generateWireFram
     'proveCertificate-simple': generateWireFramesFor(
         'proveCertificate',
         { // Result object definition
-            keyringForVerifier: {"name": "name-key"},
+            keyringForVerifier: {"name": "bmFtZS1rZXk="},
         } as ProveCertificateResult,
         { // Args object definition
             certificate: {
