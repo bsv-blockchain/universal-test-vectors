@@ -10,7 +10,7 @@ export const proveCertificate: Record<string, ReturnType<typeof generateWireFram
     'proveCertificate-simple': generateWireFramesFor(
         'proveCertificate',
         { // Result object definition
-            keyringForVerifier: {"name": "name-key"},
+            keyringForVerifier: {"name": "bmFtZS1rZXk="},
         } as ProveCertificateResult,
         { // Args object definition
             certificate: {
@@ -19,9 +19,9 @@ export const proveCertificate: Record<string, ReturnType<typeof generateWireFram
                 serialNumber: "AAAAAAAAAAAAAAAAAAB0ZXN0LXNlcmlhbC1udW1iZXI=",
                 subject: pubKeyHex,
                 certifier: CounterpartyHex,
-                revocationOutpoint: "txid123:0",
-                fields: {"name": "Alice", "email": "alice@example.com"},
-                signature: "7369676e61747572652d686578", // hex for "signature-hex"
+                revocationOutpoint: "aec245f27b7640c8b1865045107731bfb848115c573f7da38166074b1c9e475d.0",
+                fields: {"email": "alice@example.com", "name": "Alice"}, // Fields must be alphabetically ordered for serialization to match exactly
+                signature: "3045022100a6f09ee70382ab364f3f6b040aebb8fe7a51dbc3b4c99cfeb2f7756432162833022067349b91a6319345996faddf36d1b2f3a502e4ae002205f9d2db85474f9aed5a",
             },
             // ProveCertificateArgs specific fields
             fieldsToReveal: ["name"],

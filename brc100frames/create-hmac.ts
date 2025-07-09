@@ -6,7 +6,10 @@ export const createHmac: Record<string, ReturnType<typeof generateWireFramesFor>
     'createHmac-simple': generateWireFramesFor(
         'createHmac',
         {
-            hmac: [50, 60, 70, 80, 90, 100, 110, 120],
+            hmac: [50, 60, 70, 80, 90, 100, 110, 120,
+                50, 60, 70, 80, 90, 100, 110, 120,
+                50, 60, 70, 80, 90, 100, 110, 120,
+                50, 60, 70, 80, 90, 100, 110, 120],
         },
         {
             protocolID: [1 /* SecurityLevelEveryApp */, 'test-protocol'],

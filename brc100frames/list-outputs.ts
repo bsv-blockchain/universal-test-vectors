@@ -13,7 +13,7 @@ export const listOutputs: Record<string, ReturnType<typeof generateWireFramesFor
                 outpoint: "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef.0",
             }, {
                 satoshis: 5000,
-                spendable: false,
+                spendable: true,
                 outpoint: "abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890.2",
             }]
         },

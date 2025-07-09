@@ -17,7 +17,6 @@ export const getPublicKey: Record<string, ReturnType<typeof generateWireFramesFo
             privileged: true,
             privilegedReason: "privileged reason",
             seekPermission: true,
-            identityKey: true,
         }
     ),
     // Add more cases if needed

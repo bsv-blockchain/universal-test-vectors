@@ -23,7 +23,7 @@ export const verifySignature: Record<string, ReturnType<typeof generateWireFrame
             privilegedReason: 'test reason',
             seekPermission: true,
             data: [11, 22, 33, 44],
-            signature: hexToBytes("302502204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd41020100"),
+            signature: hexToBytes("302502204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd41020101"),
             // hashToDirectlyVerify: undefined, // Omitting for simple test
         }
     ),
