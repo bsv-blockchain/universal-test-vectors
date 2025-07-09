@@ -10,10 +10,12 @@ func FromTxSpec(spec testabilities.TransactionSpec) models.TxSpec {
 	return models.TxSpec{
 		Sender:         FromUser(spec.Sender()),
 		Recipient:      FromUser(spec.Recipient()),
-		TxID:           spec.ID(),
-		RawHex:         spec.RawTX(),
-		BeefHex:        spec.BEEF(),
-		EfHex:          spec.EF(),
+		TxID:           spec.ID().Hex(),
+		RawHex:         spec.RawTX().Hex(),
+		BeefHex:        spec.BEEF().Hex(),
+		BeefV2Hex:      spec.BEEFv2().Hex(),
+		AtomicBeefHex:  spec.AtomicBEEF().Hex(),
+		EfHex:          spec.EF().Hex(),
 		LockingScripts: spec.LockingScripts(),
 	}
 }
