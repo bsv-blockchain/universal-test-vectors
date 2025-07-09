@@ -3,6 +3,7 @@ package testabilities
 import (
 	"fmt"
 
+	"github.com/bsv-blockchain/go-sdk/chainhash"
 	"github.com/bsv-blockchain/go-sdk/script"
 	trx "github.com/bsv-blockchain/go-sdk/transaction"
 	"github.com/bsv-blockchain/universal-test-vectors/pkg/defs"
@@ -37,7 +38,7 @@ type TransactionSpec interface {
 
 	TX() *trx.Transaction
 	InputSourceTX(inputID int) *trx.Transaction
-	ID() Hexer
+	ID() *chainhash.Hash
 	BEEF() Hexer
 	BEEFv2() Hexer
 	AtomicBEEF() Hexer
@@ -232,8 +233,8 @@ func (spec *txSpec) InputSourceTX(inputID int) *trx.Transaction {
 }
 
 // ID returns the transaction ID
-func (spec *txSpec) ID() Hexer {
-	return newHexer(spec.TX().TxID().CloneBytes())
+func (spec *txSpec) ID() *chainhash.Hash {
+	return spec.TX().TxID()
 }
 
 // BEEF returns the BEEF hex of the transaction
