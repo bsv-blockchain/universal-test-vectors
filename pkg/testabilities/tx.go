@@ -37,14 +37,21 @@ type TransactionSpec interface {
 
 	TX() *trx.Transaction
 	InputSourceTX(inputID int) *trx.Transaction
-	ID() string
-	BEEF() string
-	RawTX() string
-	EF() string
+	ID() Hexer
+	BEEF() Hexer
+	BEEFv2() Hexer
+	AtomicBEEF() Hexer
+	RawTX() Hexer
+	EF() Hexer
 	LockingScripts() []string
 
 	Sender() User
 	Recipient() User
+}
+
+type Hexer interface {
+	Bytes() []byte
+	Hex() string
 }
 
 func GivenTX() TransactionSpec {
@@ -225,32 +232,52 @@ func (spec *txSpec) InputSourceTX(inputID int) *trx.Transaction {
 }
 
 // ID returns the transaction ID
-func (spec *txSpec) ID() string {
-	return spec.TX().TxID().String()
+func (spec *txSpec) ID() Hexer {
+	return newHexer(spec.TX().TxID().CloneBytes())
 }
 
 // BEEF returns the BEEF hex of the transaction
-func (spec *txSpec) BEEF() string {
+func (spec *txSpec) BEEF() Hexer {
 	tx := spec.TX()
-	beef, err := tx.BEEFHex()
+	beef, err := tx.BEEF()
 	spec.requireNoError(err, "beef transaction")
 
-	return beef
+	return newHexer(beef)
+}
+
+// BEEFv2 returns a Hexer containing the BEEFv2-encoded bytes of the transaction built from the current txSpec.
+func (spec *txSpec) BEEFv2() Hexer {
+	tx := spec.TX()
+	beefV2, err := trx.NewBeefFromTransaction(tx)
+	spec.requireNoError(err, "beefV2 transaction")
+
+	bytes, err := beefV2.Bytes()
+	spec.requireNoError(err, "getting beefV2 bytes")
+
+	return newHexer(bytes)
+}
+
+func (spec *txSpec) AtomicBEEF() Hexer {
+	tx := spec.TX()
+	atomicBEEF, err := tx.AtomicBEEF(false)
+	spec.requireNoError(err, "atomic beef transaction")
+
+	return newHexer(atomicBEEF)
 }
 
 // RawTX returns the raw hex of the transaction
-func (spec *txSpec) RawTX() string {
+func (spec *txSpec) RawTX() Hexer {
 	tx := spec.TX()
-	return tx.Hex()
+	return newHexer(tx.Bytes())
 }
 
 // EF returns the EF hex of the transaction
-func (spec *txSpec) EF() string {
+func (spec *txSpec) EF() Hexer {
 	tx := spec.TX()
-	ef, err := tx.EFHex()
+	ef, err := tx.EF()
 	spec.requireNoError(err, "getting ef hex")
 
-	return ef
+	return newHexer(ef)
 }
 
 // LockingScripts returns the locking scripts of the transaction
@@ -316,4 +343,20 @@ func (spec *txSpec) requireNoError(err error, msg string) {
 	if err != nil {
 		panic(fmt.Errorf("TXSpec error: %s: %w", msg, err))
 	}
+}
+
+type hexer struct {
+	bytes []byte
+}
+
+func (h *hexer) Bytes() []byte {
+	return h.bytes
+}
+
+func (h *hexer) Hex() string {
+	return fmt.Sprintf("%x", h.bytes)
+}
+
+func newHexer(b []byte) Hexer {
+	return &hexer{bytes: b}
 }

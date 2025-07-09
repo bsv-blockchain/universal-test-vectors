@@ -7,6 +7,8 @@ type TxSpec struct {
 	TxID           string   `json:"tx_id"`
 	RawHex         string   `json:"raw_hex"`
 	BeefHex        string   `json:"beef_hex"`
+	BeefV2Hex      string   `json:"beef_v2_hex"`
+	AtomicBeefHex  string   `json:"atomic_beef_hex"`
 	EfHex          string   `json:"ef_hex"`
 	LockingScripts []string `json:"locking_scripts"`
 }
