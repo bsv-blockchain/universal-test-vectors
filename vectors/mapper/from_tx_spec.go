@@ -10,7 +10,7 @@ func FromTxSpec(spec testabilities.TransactionSpec) models.TxSpec {
 	return models.TxSpec{
 		Sender:         FromUser(spec.Sender()),
 		Recipient:      FromUser(spec.Recipient()),
-		TxID:           spec.ID().Hex(),
+		TxID:           spec.ID().String(),
 		RawHex:         spec.RawTX().Hex(),
 		BeefHex:        spec.BEEF().Hex(),
 		BeefV2Hex:      spec.BEEFv2().Hex(),
