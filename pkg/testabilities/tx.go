@@ -2,8 +2,8 @@ package testabilities
 
 import (
 	"fmt"
-	"github.com/bsv-blockchain/go-sdk/chainhash"
 
+	"github.com/bsv-blockchain/go-sdk/chainhash"
 	"github.com/bsv-blockchain/go-sdk/script"
 	trx "github.com/bsv-blockchain/go-sdk/transaction"
 	"github.com/bsv-blockchain/universal-test-vectors/pkg/defs"
