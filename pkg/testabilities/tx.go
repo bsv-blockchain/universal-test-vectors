@@ -257,6 +257,7 @@ func (spec *txSpec) BEEFv2() Hexer {
 	return newHexer(bytes)
 }
 
+// AtomicBEEF returns a Hexer containing the atomic BEEF-encoded bytes of the transaction built from the current txSpec.
 func (spec *txSpec) AtomicBEEF() Hexer {
 	tx := spec.TX()
 	atomicBEEF, err := tx.AtomicBEEF(false)
