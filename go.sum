@@ -1,5 +1,5 @@
-github.com/bsv-blockchain/go-sdk v1.2.6 h1:6J1I1rBNhCZuQ64OoNAZICMVDKYEEGYkmsD21dQt4LY=
-github.com/bsv-blockchain/go-sdk v1.2.6/go.mod h1:Dc8WX7olShuMHLfNTBpVQnkxZWbu3djbAer/73yMcd4=
+github.com/bsv-blockchain/go-sdk v1.2.8 h1:3l77KtXylwmfkTQT6RGQwMsyWYKJ4JrG4lDcjYtOdJ4=
+github.com/bsv-blockchain/go-sdk v1.2.8/go.mod h1:Dc8WX7olShuMHLfNTBpVQnkxZWbu3djbAer/73yMcd4=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
