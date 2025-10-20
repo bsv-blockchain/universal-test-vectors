@@ -49,7 +49,10 @@ export const listCertificates: Record<string, ReturnType<typeof generateWireFram
                     signature: "3045022100a6f09ee70382ab364f3f6b040aebb8fe7a51dbc3b4c99cfeb2f7756432162833022067349b91a6319345996faddf36d1b2f3a502e4ae002205f9d2db85474f9aed5a",
 
                     // CertificateResult specific fields
-                    keyring: {"field1": "key1", "field2": "key2"},
+                    keyring: {
+                        "field1": "a2V5MQ==", // "key1"
+                        "field2": "a2V5Mg==", // "key2"
+                    },
                     verifier: VerifierHex,
                 }
             ]
