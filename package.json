@@ -4,6 +4,6 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "@bsv/sdk": "^1.6.11"
+    "@bsv/sdk": "^1.8.3"
   }
 }
